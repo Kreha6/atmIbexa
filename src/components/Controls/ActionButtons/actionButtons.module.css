@@ -17,6 +17,15 @@
   border-radius: 8px;
 }
 
+.action-buttons__button:disabled {
+  cursor: not-allowed;
+  background: #757575;
+}
+
+.action-buttons__button:disabled:hover {
+  background: #757575;
+}
+
 .action-buttons__button--withdraw {
   background: #e53935;
   color: #fff;
@@ -36,12 +45,12 @@
 }
 
 .action-buttons__button--clear {
-  background: #757575;
+  background: #f7c214;
   color: #fff;
 }
 
 .action-buttons__button--clear:hover {
-  background: #616161;
+  background: #d6a915;
 }
 
 .action-buttons__error {

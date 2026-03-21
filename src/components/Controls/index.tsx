@@ -4,8 +4,14 @@ import { Keyboard } from "./Keyboard";
 import styles from "./index.module.css";
 
 export const Controls = () => {
-  const { handleDeposit, handleWithdraw, handleKeyPress, newAmount, clearAmount, error } =
-    useKeyboardWithActionButtons();
+  const {
+    handleDeposit,
+    handleWithdraw,
+    handleKeyPress,
+    newAmount,
+    clearAmount,
+    error,
+  } = useKeyboardWithActionButtons();
 
   return (
     <div className={styles.controls}>
