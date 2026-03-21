@@ -1,14 +1,14 @@
-.wrapper {
+.action-buttons {
   width: 150px;
 }
 
-.controls {
+.action-buttons__group {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.button {
+.action-buttons__button {
   flex: 1;
   padding: 12px 24px;
   font-size: 1rem;
@@ -17,34 +17,34 @@
   border-radius: 8px;
 }
 
-.withdraw {
+.action-buttons__button--withdraw {
   background: #e53935;
   color: #fff;
 }
 
-.withdraw:hover {
+.action-buttons__button--withdraw:hover {
   background: #c62828;
 }
 
-.deposit {
+.action-buttons__button--deposit {
   background: #43a047;
   color: #fff;
 }
 
-.deposit:hover {
+.action-buttons__button--deposit:hover {
   background: #2e7d32;
 }
 
-.clear {
+.action-buttons__button--clear {
   background: #757575;
   color: #fff;
 }
 
-.clear:hover {
+.action-buttons__button--clear:hover {
   background: #616161;
 }
 
-.error {
+.action-buttons__error {
   color: #e53935;
   margin: 0;
   font-size: 0.875rem;

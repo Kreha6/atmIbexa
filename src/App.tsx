@@ -4,7 +4,7 @@ import { BalanceDisplay } from "./components/BalanceDisplay";
 
 function App() {
   return (
-    <main className={styles.main}>
+    <main className={styles.app}>
       <BalanceDisplay />
       <Controls />
     </main>

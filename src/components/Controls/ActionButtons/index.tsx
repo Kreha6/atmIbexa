@@ -10,17 +10,17 @@ interface ControlsProps {
 
 export const ActionButtons = ({ onWithdraw, onDeposit, onClear, error, newAmount }: ControlsProps) => {
   return (
-    <div className={styles.wrapper}>
-      {error && <p className={styles.error} role="alert" aria-live="assertive">{error}</p>}
-      <div className={styles.controls}>
-        <button className={`${styles.button} ${styles.withdraw}`} onClick={onWithdraw} aria-label="Withdraw amount">
+    <div className={styles['action-buttons']}>
+      {error && <p className={styles['action-buttons__error']} role="alert" aria-live="assertive">{error}</p>}
+      <div className={styles['action-buttons__group']}>
+        <button className={`${styles['action-buttons__button']} ${styles['action-buttons__button--withdraw']}`} onClick={onWithdraw} aria-label="Withdraw amount">
           Withdraw
         </button>
-        <button className={`${styles.button} ${styles.deposit}`} onClick={onDeposit} aria-label="Deposit amount">
+        <button className={`${styles['action-buttons__button']} ${styles['action-buttons__button--deposit']}`} onClick={onDeposit} aria-label="Deposit amount">
           Deposit
         </button>
         {newAmount! > 0 && (
-          <button className={`${styles.button} ${styles.clear}`} onClick={onClear} aria-label="Clear amount">
+          <button className={`${styles['action-buttons__button']} ${styles['action-buttons__button--clear']}`} onClick={onClear} aria-label="Clear amount">
             Clear
           </button>
         )}

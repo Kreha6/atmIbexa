@@ -1,4 +1,4 @@
-.balanceWrapper {
+.balance-display {
   width: 100%;
   text-align: right;
   font-size: 1.5rem;
@@ -9,6 +9,6 @@
   box-sizing: border-box;
 }
 
-.balance {
+.balance-display__text {
   margin: 0;
 }

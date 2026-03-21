@@ -5,11 +5,11 @@
   width: fit-content;
 }
 
-.amount {
+.keyboard__amount {
   margin: 0;
 }
 
-.display {
+.keyboard__display {
   grid-column: 1 / -1;
   text-align: right;
   font-size: 1.5rem;
@@ -20,7 +20,7 @@
   min-width: 0;
 }
 
-.key {
+.keyboard__key {
   width: 64px;
   height: 64px;
   font-size: 1.25rem;
@@ -30,14 +30,14 @@
   background: #f5f5f5;
 }
 
-.key:hover {
+.keyboard__key:hover {
   background: #e0e0e0;
 }
 
-.key:active {
+.keyboard__key:active {
   background: #d0d0d0;
 }
 
-.zero {
+.keyboard__key--zero {
   grid-column: 2;
 }
