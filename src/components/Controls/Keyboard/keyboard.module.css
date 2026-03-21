@@ -5,6 +5,10 @@
   width: fit-content;
 }
 
+.amount {
+  margin: 0;
+}
+
 .display {
   grid-column: 1 / -1;
   text-align: right;

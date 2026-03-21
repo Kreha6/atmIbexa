@@ -10,12 +10,13 @@ const Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 export const Keyboard = ({ onKeyPress, amount }: KeyboardProps) => {
   return (
     <div className={styles.keyboard}>
-      <div className={styles.display}>{amount}</div>
+      <div className={styles.display} aria-label={`Current amount`}><p className={styles.amount}>{amount}</p></div>
       {Numbers.map((n) => (
         <button
           key={n}
           className={`${styles.key}${n === 0 ? ` ${styles.zero}` : ""}`}
           onClick={() => onKeyPress(n)}
+          aria-label={`Enter digit ${n}`}
         >
           {n}
         </button>

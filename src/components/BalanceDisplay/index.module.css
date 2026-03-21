@@ -1,4 +1,4 @@
-.balance {
+.balanceWrapper {
   width: 100%;
   text-align: right;
   font-size: 1.5rem;
@@ -7,4 +7,8 @@
   border-radius: 8px;
   background: #fafafa;
   box-sizing: border-box;
+}
+
+.balance {
+  margin: 0;
 }
