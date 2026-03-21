@@ -1,0 +1,25 @@
+import styles from "./keyboard.module.css";
+
+interface KeyboardProps {
+  onKeyPress: (value: number) => void;
+  amount: number;
+}
+
+const Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+export const Keyboard = ({ onKeyPress, amount }: KeyboardProps) => {
+  return (
+    <div className={styles.keyboard}>
+      <div className={styles.display}>{amount}</div>
+      {Numbers.map((n) => (
+        <button
+          key={n}
+          className={`${styles.key}${n === 0 ? ` ${styles.zero}` : ""}`}
+          onClick={() => onKeyPress(n)}
+        >
+          {n}
+        </button>
+      ))}
+    </div>
+  );
+}

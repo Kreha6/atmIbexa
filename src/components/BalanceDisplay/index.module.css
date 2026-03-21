@@ -1,0 +1,10 @@
+.balance {
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+  box-sizing: border-box;
+}
