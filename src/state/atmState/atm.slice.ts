@@ -6,7 +6,7 @@ export type AtmState = {
 };
 
 export const createAtmSlice: StateCreator<AtmState> = (set, get) => ({
-  balance: 1000,
+  balance: 0,
   updateBalance: (amount: number) => {
     set((state) => ({
       balance: state.balance + amount,
