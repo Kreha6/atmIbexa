@@ -1,6 +1,7 @@
 import { useKeyboardWithActionButtons } from "./hooks/useKeyboardWithActionButtons";
 import { ActionButtons } from "./ActionButtons";
 import { Keyboard } from "./Keyboard";
+import { formatAmount } from "../../utils/formatAmount";
 import styles from "./index.module.css";
 
 export const Controls = () => {
@@ -15,7 +16,7 @@ export const Controls = () => {
 
   return (
     <div className={styles.controls}>
-      <Keyboard onKeyPress={handleKeyPress} amount={newAmount.toFixed(0)} />
+      <Keyboard onKeyPress={handleKeyPress} amount={formatAmount(newAmount)} />
       <ActionButtons
         onDeposit={handleDeposit}
         onWithdraw={handleWithdraw}
