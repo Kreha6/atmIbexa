@@ -1,12 +1,15 @@
 .keyboard {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 64px);
   gap: 8px;
   width: fit-content;
 }
 
 .keyboard__amount {
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .keyboard__display {

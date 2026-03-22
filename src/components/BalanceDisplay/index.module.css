@@ -1,5 +1,6 @@
 .balance-display {
   width: 100%;
+  max-width: 100%;
   text-align: right;
   font-size: 1.5rem;
   padding: 8px 12px;
@@ -7,8 +8,12 @@
   border-radius: 8px;
   background: #fafafa;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .balance-display__text {
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
