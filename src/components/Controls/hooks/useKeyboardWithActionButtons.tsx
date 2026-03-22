@@ -2,10 +2,11 @@ import { useState } from "react";
 import { useStore } from "../../../state/useStore";
 
 export function useKeyboardWithActionButtons() {
-  const updateBalance = useStore((state) => state.updateBalance);
-  const balance = useStore((state) => state.balance);
   const [newAmount, setNewAmount] = useState(0);
   const [error, setError] = useState<string | null>(null);
+
+  const updateBalance = useStore((state) => state.updateBalance);
+  const balance = useStore((state) => state.balance);
 
   const clearAmount = () => {
     setError(null);

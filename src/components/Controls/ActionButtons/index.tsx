@@ -1,10 +1,10 @@
 import styles from "./actionButtons.module.css";
 
 interface ControlsProps {
-  onWithdraw?: () => void;
-  onDeposit?: () => void;
-  onClear?: () => void;
-  error?: string | null;
+  onWithdraw: () => void;
+  onDeposit: () => void;
+  onClear: () => void;
+  error: string | null;
   newAmount: number;
 }
 
