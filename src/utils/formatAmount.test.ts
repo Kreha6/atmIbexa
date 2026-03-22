@@ -11,11 +11,11 @@ describe("formatAmount", () => {
     expect(formatAmount(new Big(999))).toBe("999");
   });
 
-  it("Should add a space separators", () => {
+  it("Should add space separators", () => {
     expect(formatAmount(new Big(12345678))).toBe("12\u00a0345\u00a0678");
   });
 
-  it("Should format a large number without scientific notation", () => {
+  it("Should format large number without scientific notation", () => {
     expect(formatAmount(new Big("999999999999999999"))).toBe(
       "999\u00a0999\u00a0999\u00a0999\u00a0999\u00a0999"
     );
