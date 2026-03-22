@@ -1,8 +1,9 @@
 import { useState } from "react";
+import Big from "big.js";
 import { useStore } from "../../../state/useStore";
 
 export function useKeyboardWithActionButtons() {
-  const [newAmount, setNewAmount] = useState(0);
+  const [newAmount, setNewAmount] = useState(new Big(0));
   const [error, setError] = useState<string | null>(null);
 
   const updateBalance = useStore((state) => state.updateBalance);
@@ -10,11 +11,11 @@ export function useKeyboardWithActionButtons() {
 
   const clearAmount = () => {
     setError(null);
-    setNewAmount(0);
+    setNewAmount(new Big(0));
   };
 
   const handleKeyPress = (digit: number) => {
-    setNewAmount((prev) => prev * 10 + digit);
+    setNewAmount((prev) => prev.times(10).plus(digit));
   };
 
   const handleDeposit = () => {
@@ -24,12 +25,12 @@ export function useKeyboardWithActionButtons() {
   };
 
   const handleWithdraw = () => {
-    if (balance - newAmount < 0) {
+    if (balance.minus(newAmount).lt(0)) {
       setError("Insufficient funds");
       return;
     }
     setError(null);
-    updateBalance(-newAmount);
+    updateBalance(newAmount.times(-1));
     clearAmount();
   };
 

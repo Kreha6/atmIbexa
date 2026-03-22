@@ -2,7 +2,7 @@ import styles from "./keyboard.module.css";
 
 interface KeyboardProps {
   onKeyPress: (value: number) => void;
-  amount: number;
+  amount: string;
 }
 
 const Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];

@@ -1,3 +1,4 @@
+import Big from "big.js";
 import styles from "./actionButtons.module.css";
 
 interface ControlsProps {
@@ -5,7 +6,7 @@ interface ControlsProps {
   onDeposit: () => void;
   onClear: () => void;
   error: string | null;
-  newAmount: number;
+  newAmount: Big;
 }
 
 export const ActionButtons = ({
@@ -43,7 +44,7 @@ export const ActionButtons = ({
         </button>
 
         <button
-          disabled={newAmount <= 0}
+          disabled={newAmount.lte(0)}
           className={`${styles["action-buttons__button"]} ${styles["action-buttons__button--clear"]}`}
           onClick={onClear}
           aria-label="Clear amount"

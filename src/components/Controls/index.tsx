@@ -15,7 +15,7 @@ export const Controls = () => {
 
   return (
     <div className={styles.controls}>
-      <Keyboard onKeyPress={handleKeyPress} amount={newAmount} />
+      <Keyboard onKeyPress={handleKeyPress} amount={newAmount.toString()} />
       <ActionButtons
         onDeposit={handleDeposit}
         onWithdraw={handleWithdraw}

@@ -5,6 +5,7 @@
     "moduleResolution": "node",
     "allowImportingTsExtensions": false,
     "verbatimModuleSyntax": false,
+    "esModuleInterop": true,
     "types": ["jest", "@testing-library/jest-dom"]
   }
 }

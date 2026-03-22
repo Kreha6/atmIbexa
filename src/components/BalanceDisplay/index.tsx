@@ -10,7 +10,7 @@ export const BalanceDisplay = () => {
       role="status"
       aria-label={`Account balance`}
     >
-      <p className={styles["balance-display__text"]}>Balance: {balance}</p>
+      <p className={styles["balance-display__text"]}>Balance: {balance.toString()}</p>
     </div>
   );
 };
