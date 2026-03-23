@@ -1,3 +1,4 @@
+import { memo } from "react";
 import styles from "./keyboard.module.css";
 
 interface KeyboardProps {
@@ -7,7 +8,7 @@ interface KeyboardProps {
 
 const Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
-export const Keyboard = ({ onKeyPress, amount }: KeyboardProps) => {
+export const Keyboard = memo(({ onKeyPress, amount }: KeyboardProps) => {
   return (
     <div className={styles.keyboard}>
       <div
@@ -28,4 +29,4 @@ export const Keyboard = ({ onKeyPress, amount }: KeyboardProps) => {
       ))}
     </div>
   );
-};
+});

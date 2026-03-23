@@ -1,4 +1,4 @@
-import Big from "big.js";
+import { memo } from "react";
 import styles from "./actionButtons.module.css";
 
 interface ControlsProps {
@@ -6,15 +6,15 @@ interface ControlsProps {
   onDeposit: () => void;
   onClear: () => void;
   error: string | null;
-  newAmount: Big;
+  disableClearButton: boolean;
 }
 
-export const ActionButtons = ({
+export const ActionButtons = memo(({
   onWithdraw,
   onDeposit,
   onClear,
   error,
-  newAmount,
+  disableClearButton,
 }: ControlsProps) => {
   return (
     <div className={styles["action-buttons"]}>
@@ -44,7 +44,7 @@ export const ActionButtons = ({
         </button>
 
         <button
-          disabled={newAmount.lte(0)}
+          disabled={disableClearButton}
           className={`${styles["action-buttons__button"]} ${styles["action-buttons__button--clear"]}`}
           onClick={onClear}
           aria-label="Clear amount"
@@ -54,4 +54,4 @@ export const ActionButtons = ({
       </div>
     </div>
   );
-};
+});

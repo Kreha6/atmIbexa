@@ -21,7 +21,7 @@ export const Controls = () => {
         onDeposit={handleDeposit}
         onWithdraw={handleWithdraw}
         onClear={clearAmount}
-        newAmount={newAmount}
+        disableClearButton={newAmount.lte(0)}
         error={error}
       />
     </div>

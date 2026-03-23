@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import Big from "big.js";
 import { useStore } from "../../../state/useStore";
 
@@ -9,14 +9,14 @@ export function useKeyboardWithActionButtons() {
   const updateBalance = useStore((state) => state.updateBalance);
   const balance = useStore((state) => state.balance);
 
-  const clearAmount = () => {
+  const clearAmount = useCallback(() => {
     setError(null);
     setNewAmount(new Big(0));
-  };
+  }, []);
 
-  const handleKeyPress = (digit: number) => {
+  const handleKeyPress = useCallback((digit: number) => {
     setNewAmount((prev) => prev.times(10).plus(digit));
-  };
+  }, []);
 
   const handleDeposit = () => {
     setError(null);
