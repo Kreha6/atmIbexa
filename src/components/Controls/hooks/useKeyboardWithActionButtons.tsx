@@ -18,13 +18,13 @@ export function useKeyboardWithActionButtons() {
     setNewAmount((prev) => prev.times(10).plus(digit));
   }, []);
 
-  const handleDeposit = () => {
+  const handleDeposit = useCallback(() => {
     setError(null);
     updateBalance(newAmount);
     clearAmount();
-  };
+  }, [newAmount, updateBalance, clearAmount]);
 
-  const handleWithdraw = () => {
+  const handleWithdraw = useCallback(() => {
     if (balance.minus(newAmount).lt(0)) {
       setError("Insufficient funds");
       return;
@@ -32,7 +32,7 @@ export function useKeyboardWithActionButtons() {
     setError(null);
     updateBalance(newAmount.times(-1));
     clearAmount();
-  };
+  }, [balance, newAmount, updateBalance, clearAmount]);
 
   return {
     handleDeposit,
