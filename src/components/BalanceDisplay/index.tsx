@@ -6,7 +6,7 @@ export const BalanceDisplay = () => {
   const balance = useStore((state) => state.balance);
 
   return (
-    <div
+    <section
       className={styles["balance-display"]}
       role="status"
       aria-label={`Account balance`}
@@ -14,6 +14,6 @@ export const BalanceDisplay = () => {
       <p className={styles["balance-display__text"]}>
         Balance: {formatAmount(balance)}
       </p>
-    </div>
+    </section>
   );
 };

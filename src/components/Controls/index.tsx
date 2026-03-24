@@ -15,7 +15,7 @@ export const Controls = () => {
   } = useKeyboardWithActionButtons();
 
   return (
-    <div className={styles.controls}>
+    <section className={styles.controls}>
       <Keyboard onKeyPress={handleKeyPress} amount={formatAmount(newAmount)} />
       <ActionButtons
         onDeposit={handleDeposit}
@@ -24,6 +24,6 @@ export const Controls = () => {
         disableClearButton={newAmount.lte(0)}
         error={error}
       />
-    </div>
+    </section>
   );
 };
